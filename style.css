@@ -1,7 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #edf2f9;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* grid container */
+.testimonials {
+  max-width: 1440px;
+  margin: 6.5rem auto;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin-bottom: 1.2rem;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card__header h3 {
+  font-size: 0.9rem;
+}
+
+.card__header p {
+  opacity: 50%;
+}
+
+.card__img {
+  width: 2.6rem;
+  border-radius: 50%;
+  border: 2px solid #996ed8;
+  margin-right: 0.6rem;
+}
+
+.card__lead {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.card__quote {
+  /* font-weight: bold; */
+  line-height: 1.5;
+  opacity: 70%;
+}
+
+.card--bg-purple {
+  background: hsl(263, 55%, 52%);
+  color: #fff;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 10px right 100px;
+}
+
+.card--bg-gray-blue {
+  background: hsl(217, 19%, 35%);
+  color: #fff;
+}
+
+.card--bg-black-blue {
+  background: hsl(219, 29%, 14%);
+  color: #fff;
+}
+
+footer {
+  padding-bottom: 0.5rem;
+}
 .attribution {
-  font-size: 11px;
+  font-size: 16px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  color: hsl(206, 99%, 50%);
+}
+
+.attribution a:hover {
+  color: rgb(242, 105, 127);
+}
+
+.card:nth-of-type(1) {
+  grid-column: 1/3;
+}
+
+.card:nth-of-type(2) {
+  grid-column: 3;
+}
+
+.card:nth-of-type(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.card:nth-of-type(4) {
+  grid-column: 2/4;
+  grid-row: 2;
+}
+
+.card:nth-of-type(5) {
+  grid-column: 4;
+  grid-row: 1/3;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    display: block;
+    margin: 3rem auto;
+  }
+
+  .card--bg-purple {
+    background-position: top 10px right 30px;
+  }
 }
